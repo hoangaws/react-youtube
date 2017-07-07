@@ -5,11 +5,12 @@ import { createStore, applyMiddleware } from 'redux';
 import { connect, Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducer from '../reducers';
+
 import Downloads from './Downloads';
 import Search from './Search';
 import Player from './Player';
 import MiniPlayer from './MiniPlayer';
-import Styles from '../styles';
+// import Styles from '../styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
@@ -31,7 +32,7 @@ export default class App extends Component {
               <Scene key="home" initial tabs={true}>
                 <Scene key="search" component={Search} title="Search" duration={0} icon={TabIcon} animation="fade" />
                 <Scene key="download" component={Downloads} initial title="Downloads" duration={0} icon={TabIcon}  animation="fade" />
-                {/*<Scene key="download2" component={Downloads} title="Downloads" duration={0} icon={TabIcon}  animation="fade" />*/}
+                <Scene key="book" component={Search} title="Downloads" duration={0} icon={TabIcon}  animation="fade" />
               </Scene>
               <Scene key="player" component={Player} hideNavBar hideTabBar direction="vertical" />
             </Scene>
